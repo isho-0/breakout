@@ -1,6 +1,7 @@
 # 소스 파일
 set(SOURCES
         main.cc
+        shader.cc
 
 )
 
