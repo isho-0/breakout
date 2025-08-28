@@ -1,7 +1,12 @@
 #include "shader.h"
 
+#ifdef __APPLE__
+#include <OpenGL/gl3.h>
+#else
+#include <GL/gl.h>
+#endif
+
 #include <iostream>
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 Shader &Shader::Use(){

@@ -1,7 +1,6 @@
 #include "texture.h"
 
 #include <iostream>
-#include <GL/glew.h>
 
 Texture2D::Texture2D()
     : Width(0), Height(0),
