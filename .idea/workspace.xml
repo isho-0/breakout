@@ -7,9 +7,9 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -20,7 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0129e773-8f3e-40d6-b7f1-2cfc4af14d70" name="Changes" comment="" />
+    <list default="true" id="0129e773-8f3e-40d6-b7f1-2cfc4af14d70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/game.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resource_manager.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resource_manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +43,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="31ow47Y3483SlKjSUmiYXGEEuYr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,6 +86,7 @@
       <workItem from="1756203540125" duration="143000" />
       <workItem from="1756203893978" duration="3749000" />
       <workItem from="1756219935166" duration="408000" />
+      <workItem from="1756251074056" duration="4321000" />
     </task>
     <servers />
   </component>
