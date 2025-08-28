@@ -1,6 +1,6 @@
 #include "resource_manager.h"
 
-#include <iostrema>
+#include <iostream>
 #include <sstream>
 #include <fstream>
 
@@ -11,7 +11,7 @@ std::map<std::string, Shader> ResourceManager::Shaders;
 
 Shader ResourceManager::LoadShader(
     const char *vShaderFile,
-    const char *fShaderFile
+    const char *fShaderFile,
     const char *gShaderFile,
     std::string name){
     Shaders[name] = loadShaderFromFile(vShaderFile, fShaderFile, gShaderFile);
@@ -54,8 +54,8 @@ Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *
     vertexShaderFile.close();
     fragmentShaderFile.close();
 
-    vertexCode = vertexShaderFile.str();
-    fragmentCode = fragmentShaderFile.str();
+    vertexCode = vShaderStream.str();
+    fragmentCode = fShaderStream.str();
 
     if(gShaderFile != nullptr){
       std::ifstream geometryShaderFile(gShaderFile);
@@ -64,7 +64,7 @@ Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *
       geometryShaderFile.close();
       geometryCode = gShaderStream.str();
     }
-  } catch(std::exception e){
+  } catch(std::exception& e){
     std::cout << "ERROR::SHADER: Failed to read shader files" << std::endl;
   }
   const char *vShaderCode = vertexCode.c_str();
@@ -72,7 +72,7 @@ Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *
   const char *gShaderCode = geometryCode.c_str();
 
   Shader shader;
-  shader.Compile(vShaderCode, fShaderCode,gShaderCode != nullptr ? gShaderCode : nullptr);
+  shader.Compile(vShaderCode, fShaderCode, gShaderCode != nullptr ? gShaderCode : nullptr);
   return shader;
 }
 
@@ -85,4 +85,11 @@ Texture2D ResourceManager::loadTextureFromFile(const char *file, bool alpha){
 
   int width, height, nrChannels;
   unsigned char *data = stbi_load(file, &width, &height, &nrChannels, 0);
+  
+  if(data){
+    texture.Generate(width, height, data);
+    stbi_image_free(data);
+  }
+  
+  return texture;
 }

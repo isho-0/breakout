@@ -1,7 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <glad/glad.h>
+#ifdef __APPLE__
+#include <OpenGL/gl3.h>
+#else
+#include <GL/gl.h>
+#endif
 #include <GLFW/glfw3.h>
 
 enum GameState {
